@@ -1,7 +1,14 @@
 .app-container {
-  background-color: #f3f3fb;
-  min-height: 100vh;
+  background-color: #ffffff;
+  height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 31px;
+  margin-top: 70px;
+  margin-left: 70px;
 }

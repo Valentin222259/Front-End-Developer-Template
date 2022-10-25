@@ -1,0 +1,14 @@
+.task-viewer {
+    background-color: #f3f3fb;
+    min-height: 75vh;
+    margin: 70px;
+    border-radius: 50px;
+    padding: 80px;
+    gap: 40px;
+    
+    display: flex;
+    justify-content: start;
+    align-items:flex-start;
+    flex-wrap: wrap;
+  }
+  
