@@ -1,0 +1,11 @@
+.task-wrapper{
+
+    display: flex;
+    
+    align-items: flex-start;
+    padding: 80px;
+    gap: 40px;
+
+background: #F3F3FB;
+border-radius: 50px;
+}
