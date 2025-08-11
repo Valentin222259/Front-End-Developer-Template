@@ -3,8 +3,10 @@ import "./TodoItem.css";
 import Checkbox from "../checkbox/CheckBox";
 
 const TodoItem = (props) => {
-  const handleCheckboxChange = (value) => {
-    console.log(value);
+  const handleCheckboxChange = () => {
+    if (props.onToggleComplete) {
+      props.onToggleComplete(props.id); //apelam callback din app
+    }
   };
 
   return (
@@ -16,20 +18,27 @@ const TodoItem = (props) => {
             onChange={handleCheckboxChange}
           />
 
-          <h4>Assignment 1</h4>
+          <h4>{props.title}</h4>
         </div>
         <div>
-          <i className="fa fa-pencil" aria-hidden="true"></i>
-          <i className="fa fa-trash" aria-hidden="true"></i>
+          <i
+            className="fa fa-pencil"
+            aria-hidden="true"
+            onClick={() => props.onEdit && props.onEdit(props.id)}
+            style={{ cursor: "pointer", marginRight: "8px" }}
+          ></i>
+          <i
+            className="fa fa-trash"
+            aria-hidden="true"
+            onClick={() => props.onDelete && props.onDelete(props.id)}
+            style={{ cursor: "pointer", marginRight: "8px" }}
+          ></i>
         </div>
       </div>
 
       <div className="separator"></div>
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. At id illo
-        repellendus non maiores in pariatur aliquam iure fugit amet!
-      </p>
+      <p>{props.description}</p>
     </div>
   );
 };
